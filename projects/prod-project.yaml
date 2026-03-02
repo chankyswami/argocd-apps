@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: prod
+  namespace: argocd
+spec:
+  sourceRepos:
+    - https://github.com/chankyswami/*
+
+  destinations:
+    - namespace: gfj-prod
+      server: https://172.16.16.100:6443
+
+  clusterResourceWhitelist:
+    - group: '*'
+      kind: '*'
+
+  namespaceResourceWhitelist:
+    - group: '*'
+      kind: '*'
+
+  syncWindows:
+    - kind: deny
+      applications:
+        - "*"
