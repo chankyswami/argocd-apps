@@ -8,6 +8,11 @@ spec:
     - https://github.com/chankyswami/*
 
   destinations:
+    # Parent apps (App-of-Apps)
+    - namespace: argocd
+      server: https://kubernetes.default.svc
+
+    # Workload apps
     - namespace: gfj-dev
       server: https://172.16.16.100:6443
 
