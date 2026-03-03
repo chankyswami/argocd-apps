@@ -26,10 +26,11 @@ spec:
 
 # Enable sync 
   syncWindows:
-  - kind: allow
-    applications:
-      - gfj-frontend-prod
-
+    - kind: allow
+      schedule: "* * * * *"   # always open
+      duration: 24h
+      applications:
+        - gfj-frontend-prod
 # Disable sync 
   # syncWindows: 
   #   - kind: deny
