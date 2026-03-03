@@ -24,7 +24,14 @@ spec:
     - group: '*'
       kind: '*'
 
+# Enable sync 
   syncWindows:
-    - kind: deny
-      applications:
-        - "*"
+  - kind: allow
+    applications:
+      - gfj-frontend-prod
+
+# Disable sync 
+  # syncWindows: 
+  #   - kind: deny
+  #     applications:
+  #       - "*"
