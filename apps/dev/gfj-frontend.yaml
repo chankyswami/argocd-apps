@@ -15,13 +15,14 @@ metadata:
 
     argocd-image-updater.argoproj.io/write-back-method: git
 
-    # IMPORTANT CHANGE
-    argocd-image-updater.argoproj.io/write-back-target: helmvalues:/helm/gfj-frontend/values-dev.yaml
+    # FIXED PATH
+    argocd-image-updater.argoproj.io/write-back-target: helmvalues:values-dev.yaml
 
     argocd-image-updater.argoproj.io/git-branch: main
 
 spec:
   project: dev
+
   source:
     repoURL: https://github.com/chankyswami/gfj-frontend-deployment.git
     targetRevision: main
