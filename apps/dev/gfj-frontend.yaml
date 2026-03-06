@@ -15,8 +15,8 @@ metadata:
 
     argocd-image-updater.argoproj.io/write-back-method: git
 
-    # FIXED PATH
-    argocd-image-updater.argoproj.io/write-back-target: helmvalues:values-dev.yaml
+    # IMPORTANT
+    argocd-image-updater.argoproj.io/gfj-frontend.write-back-target: helmvalues:values-dev.yaml
 
     argocd-image-updater.argoproj.io/git-branch: main
 
